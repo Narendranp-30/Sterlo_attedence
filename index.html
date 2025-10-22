@@ -8,6 +8,17 @@
 	<link rel="stylesheet" href="index.css" />
 </head>
 <body>
+	<aside class="sidebar">
+		<div class="sidebar-header">
+			<h2>Attendance</h2>
+		</div>
+		<nav class="sidebar-nav">
+			<a href="#" class="nav-item active">Dashboard</a>
+			<a href="#" class="nav-item">Students</a>
+			<a href="#" class="nav-item">Reports</a>
+			<a href="#" class="nav-item">Settings</a>
+		</nav>
+	</aside>
 	<main class="container">
 		<h1>Student Attendance Tracker</h1>
 
@@ -30,11 +41,11 @@
 							<input type="date" id="date-input" />
 						</label>
 
-						<label id="month-label" style="display:none">Month:
+						<label id="month-label" class="hidden">Month:
 							<input type="month" id="month-input" />
 						</label>
 
-						<label style="margin-left:8px">Select two off-days:
+						<label class="off-days-label">Select two off-days:
 							<select id="off1">
 								<option value="0">Sun</option>
 								<option value="1">Mon</option>
@@ -64,7 +75,7 @@
 		</section>
 
 		<footer class="notes">
-			<small>Data is stored in your browser (localStorage). Use the view controls to switch between a week and a full month view. Percentage is calculated per visible range.</small>
+			<small>Data is stored in your browser (localStorage).</small>
 		</footer>
 	</main>
 
