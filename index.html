@@ -1,0 +1,73 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Student Attendance Tracker</title>
+	<link rel="stylesheet" href="index.css" />
+</head>
+<body>
+	<main class="container">
+		<h1>Student Attendance Tracker</h1>
+
+		<section class="controls">
+			<form id="add-student-form">
+				<input id="student-name" placeholder="Enter student name" required />
+				<button type="submit">Add Student</button>
+			</form>
+
+					<div class="view-controls">
+						<label>
+							View:
+							<select id="view-select">
+								<option value="week">Week</option>
+								<option value="month">Month</option>
+							</select>
+						</label>
+
+						<label id="week-label">Week start:
+							<input type="date" id="date-input" />
+						</label>
+
+						<label id="month-label" style="display:none">Month:
+							<input type="month" id="month-input" />
+						</label>
+
+						<label style="margin-left:8px">Select two off-days:
+							<select id="off1">
+								<option value="0">Sun</option>
+								<option value="1">Mon</option>
+								<option value="2">Tue</option>
+								<option value="3">Wed</option>
+								<option value="4">Thu</option>
+								<option value="5">Fri</option>
+								<option value="6">Sat</option>
+							</select>
+							<select id="off2">
+								<option value="6">Sat</option>
+								<option value="0">Sun</option>
+								<option value="1">Mon</option>
+								<option value="2">Tue</option>
+								<option value="3">Wed</option>
+								<option value="4">Thu</option>
+								<option value="5">Fri</option>
+							</select>
+						</label>
+
+						<button id="clear-data" title="Clear all stored attendance">Clear All Data</button>
+					</div>
+		</section>
+
+		<section id="attendance-area">
+			<!-- Table rendered by JS -->
+		</section>
+
+		<footer class="notes">
+			<small>Data is stored in your browser (localStorage). Use the view controls to switch between a week and a full month view. Percentage is calculated per visible range.</small>
+		</footer>
+	</main>
+
+	<script src="index.js"></script>
+</body>
+</html>
